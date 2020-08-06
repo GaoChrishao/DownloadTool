@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <top>
+      <ToolBar prefHeight="40.0" prefWidth="850.0" BorderPane.alignment="CENTER">
+        <items>
+            <Button fx:id="btnChoose" mnemonicParsing="false" onAction="#chooseAll" text="全选" />
+            <Button fx:id="btnCreate" mnemonicParsing="false" onAction="#createDownload" text="创建" />
+            <Button fx:id="btnStart" mnemonicParsing="false" onAction="#resumeDownload" text="开始" />
+            <Button fx:id="btnStop" mnemonicParsing="false" onAction="#pauseDownload" text="暂停" />
+            <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#deleteDownload" text="删除" />
+            <Button fx:id="btnOpenDir" mnemonicParsing="false" onAction="#openDir" text="打开下载目录" />
+        </items>
+      </ToolBar>
+   </top>
+   <center>
+      <BorderPane prefHeight="400.0" prefWidth="850.0" BorderPane.alignment="CENTER">
+         <center>
+            <TableView fx:id="tabview" prefHeight="200.0" prefWidth="850.0" BorderPane.alignment="CENTER">
+              <columns>
+                  <TableColumn fx:id="checklist" prefWidth="40.0" text="选择" />
+                  <TableColumn fx:id="tab_name" minWidth="80.0" prefWidth="80.0" text="文件名" />
+                  <TableColumn fx:id="tab_link" minWidth="250.0" prefWidth="250.0" text="链接" />
+                  <TableColumn fx:id="tab_status" maxWidth="80.0" minWidth="80.0" prefWidth="80.0" text="状态" />
+                  <TableColumn fx:id="tab_progress" maxWidth="80.0" minWidth="80.0" prefWidth="80.0" text="进度" />
+                  <TableColumn fx:id="tab_spendtime" maxWidth="80.0" minWidth="80.0" prefWidth="80.0" text="耗时" />
+                  <TableColumn fx:id="tab_speed" maxWidth="100.0" minWidth="80.0" prefWidth="80.0" text="速度" />
+                  <TableColumn fx:id="tab_filesize" maxWidth="100.0" minWidth="80.0" prefWidth="80.0" text="文件大小" />
+                  <TableColumn fx:id="tab_timeleft" maxWidth="100.0" minWidth="80.0" prefWidth="80.0" text="剩余时间" />
+                  <TableColumn fx:id="tab_threadcount" maxWidth="80.0" minWidth="80.0" prefWidth="80.0" text="线程数" />
+
+              </columns>
+            </TableView>
+         </center>
+      </BorderPane>
+   </center>
+
+</BorderPane>
